@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151311">
+  <meta name="description" content="An editorial study of the Omega Seamaster, revealed one frame at a time.">
+  <title>Seamaster — Depth, in its finest form</title>
+  <style>
+    :root{--ink:#171513;--paper:#f1ede6;--sand:#cbb9a8;--gold:#b99170;--line:rgba(241,237,230,.22);--muted:#aaa29a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--ink)}body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button{font:inherit}
+    .scroll-story{height:360vh;position:relative;background:var(--ink)}.stage{height:100svh;min-height:640px;position:sticky;top:0;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 72% 46%,#634c3d 0,#29221d 35%,#171513 72%)}
+    .stage:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#171513 0%,rgba(23,21,19,.97) 23%,rgba(23,21,19,.68) 40%,rgba(23,21,19,.04) 66%),linear-gradient(0deg,rgba(12,11,10,.46),transparent 24%);pointer-events:none}
+    .topbar{height:92px;padding:0 clamp(24px,5.4vw,88px);display:flex;align-items:center;justify-content:space-between;position:absolute;z-index:5;inset:0 0 auto;border-bottom:1px solid rgba(255,255,255,.11)}
+    .brand{display:flex;align-items:center;gap:13px;font-size:14px;letter-spacing:.25em;font-weight:600}.brand-mark{font-family:Georgia,serif;font-size:25px;letter-spacing:-.08em;color:#d3b18f}.brand span:last-child{display:block}.nav-links{display:flex;align-items:center;gap:clamp(22px,3.2vw,52px);font-size:10px;text-transform:uppercase;letter-spacing:.19em;color:#d0c9c1}.nav-links a{transition:color .2s}.nav-links a:hover{color:#d3b18f}.nav-action{border:1px solid rgba(241,237,230,.42);padding:13px 19px;color:var(--paper)}
+    .watch-window{position:absolute;z-index:0;right:-1.5vw;top:50%;transform:translateY(-49%);width:min(82vw,1440px);height:min(72vh,810px);display:grid;place-items:center}.watch-window:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse,transparent 38%,rgba(19,17,15,.12) 74%,rgba(19,17,15,.35));pointer-events:none}#watchFrame{display:block;width:100%;height:100%;object-fit:contain;filter:saturate(.9);transition:opacity .16s ease;opacity:1}.watch-window.is-loading #watchFrame{opacity:.88}
+    .hero-copy{position:absolute;z-index:3;left:clamp(24px,9vw,150px);top:50%;transform:translateY(-43%);width:min(460px,34vw)}.eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#d0b69e;display:flex;align-items:center;gap:13px}.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(48px,6.15vw,92px);line-height:.95;letter-spacing:-.055em;margin:24px 0 22px}h1 em{font-weight:400;color:#d1b49a}.hero-copy p{max-width:345px;color:#c1b9b0;line-height:1.75;font-size:14px;margin:0 0 34px}.text-link{display:inline-flex;align-items:center;gap:16px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid rgba(241,237,230,.42);padding:0 0 12px}.text-link .arrow{font-size:17px;color:#d3b18f;transition:transform .2s}.text-link:hover .arrow{transform:translateX(5px)}
+    .hero-foot{position:absolute;z-index:4;left:clamp(24px,5.4vw,88px);right:clamp(24px,5.4vw,88px);bottom:36px;display:flex;align-items:center;justify-content:space-between}.frame-label{font-size:9px;letter-spacing:.18em;color:#d0c7bd;text-transform:uppercase;min-width:100px}.scrub{height:1px;background:rgba(255,255,255,.24);flex:1;max-width:340px;margin:0 26px;position:relative}.scrub-fill{position:absolute;inset:0 auto 0 0;width:0;background:#d3b18f;transition:width .08s linear}.scroll-cue{display:flex;align-items:center;gap:12px;color:#c1b9b0;font-size:9px;letter-spacing:.18em;text-transform:uppercase}.scroll-cue:after{content:"";height:1px;width:34px;background:#d3b18f}
+    .chapter{padding:clamp(90px,12vw,180px) clamp(24px,11vw,176px);position:relative}.chapter-light{background:var(--paper);color:var(--ink)}.chapter-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.24em;color:#93745a}.chapter-heading{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,6vw,80px);font-weight:400;line-height:.98;letter-spacing:-.05em;max-width:780px;margin:26px 0}.chapter-copy{font-size:15px;line-height:1.8;color:#766e66;max-width:490px}.movement-layout{display:grid;grid-template-columns:1fr .8fr;gap:8vw;align-items:center}.movement-still{position:relative;min-height:360px;overflow:hidden;background:#211b17}.movement-still img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;mix-blend-mode:screen;opacity:.88}.movement-note{position:absolute;left:24px;bottom:22px;color:#e6d8cb;text-transform:uppercase;letter-spacing:.2em;font-size:9px}.spec-row{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(23,21,19,.2);margin-top:72px;padding-top:25px;gap:22px}.spec strong{display:block;font:400 27px Georgia,serif;margin-bottom:8px}.spec span{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:#837a70}
+    .closing{min-height:500px;padding:120px 24px;text-align:center;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 100%,#453326,#171513 60%)}.closing-inner{max-width:700px}.closing .chapter-heading{margin:24px auto;color:var(--paper)}.closing p{color:#b9afa4;line-height:1.75;max-width:430px;margin:0 auto 32px;font-size:14px}.closing .text-link{border:1px solid rgba(241,237,230,.48);padding:17px 22px}
+    footer{padding:26px clamp(24px,5.4vw,88px);display:flex;justify-content:space-between;gap:20px;color:#968e85;font-size:9px;text-transform:uppercase;letter-spacing:.16em;border-top:1px solid rgba(255,255,255,.12)}
+    @media(max-width:760px){.stage{min-height:680px}.topbar{height:72px;padding:0 22px}.nav-links a:not(.nav-action){display:none}.nav-links{gap:0}.nav-action{padding:11px 13px;font-size:9px}.watch-window{width:118vw;height:58vh;right:-33vw;top:42%;opacity:.85}.stage:before{background:linear-gradient(90deg,#171513 0%,rgba(23,21,19,.92) 42%,rgba(23,21,19,.25) 100%),linear-gradient(0deg,rgba(12,11,10,.55),transparent 35%)}.hero-copy{left:25px;top:45%;width:min(360px,78vw);transform:translateY(-15%)}h1{font-size:clamp(52px,14vw,78px);margin:20px 0}.hero-copy p{font-size:13px;max-width:275px}.hero-foot{left:24px;right:24px;bottom:24px}.scrub{margin:0 12px;max-width:none}.scroll-cue{font-size:0;gap:0}.scroll-cue:after{width:24px}.frame-label{font-size:8px;min-width:88px}.movement-layout{grid-template-columns:1fr;gap:38px}.movement-still{min-height:300px;order:2}.chapter{padding:90px 25px}.spec-row{gap:12px}.spec strong{font-size:22px}.spec span{font-size:8px}.closing{min-height:420px;padding:90px 25px}footer{flex-direction:column;align-items:center;text-align:center}.scroll-story{height:330vh}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <main>
+    <section class="scroll-story" id="top" aria-label="Scroll to reveal the Seamaster">
+      <div class="stage">
+        <header class="topbar">
+          <a class="brand" href="#top" aria-label="Aurel home"><span class="brand-mark">Ω</span><span>SEAMASTER</span></a>
+          <nav class="nav-links" aria-label="Main navigation"><a href="#movement">The movement</a><a href="#details">The details</a><a class="nav-action" href="#details">Discover the watch&nbsp; ↗</a></nav>
+        </header>
+        <div class="watch-window" id="watchWindow"><img id="watchFrame" src="assets/frames/frame_000001.webp" alt="Black-dial Seamaster with rose-gold accents, shown in a cinematic product sequence" fetchpriority="high"></div>
+        <div class="hero-copy">
+          <div class="eyebrow">OMEGA&nbsp; / &nbsp;SEAMASTER</div>
+          <h1>Depth, in<br><em>its finest form.</em></h1>
+          <p>A modern icon shaped by the sea. Discover a singular study in precision, presence and refined materials.</p>
+          <a class="text-link" href="#movement">Explore the movement <span class="arrow">↘</span></a>
+        </div>
+        <div class="hero-foot">
+          <span class="frame-label" id="frameLabel">01&nbsp; / &nbsp;242</span>
+          <div class="scrub" role="progressbar" aria-label="Animation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="scrub-fill" id="scrubFill"></span></div>
+          <span class="scroll-cue">Scroll to explore</span>
+        </div>
+      </div>
+    </section>
+    <section class="chapter chapter-light" id="movement">
+      <div class="movement-layout">
+        <div>
+          <div class="chapter-kicker">01 / The heart of the watch</div>
+          <h2 class="chapter-heading">Precision,<br>revealed.</h2>
+          <p class="chapter-copy">Follow the sequence back through the craft. A closer look at the architecture within, brought together with the assurance and composure of a true instrument.</p>
+          <div class="spec-row"><div class="spec"><strong>01</strong><span>Mechanical heart</span></div><div class="spec"><strong>02</strong><span>Purposeful detail</span></div><div class="spec"><strong>03</strong><span>Ocean spirit</span></div></div>
+        </div>
+        <div class="movement-still"><img src="assets/frames/frame_000106.webp" alt="The watch shown with its movement revealed"><span class="movement-note">Inside the Seamaster</span></div>
+      </div>
+    </section>
+    <section class="closing" id="details"><div class="closing-inner"><div class="chapter-kicker">02 / Made to be remembered</div><h2 class="chapter-heading">A world of its own.</h2><p>Black ceramic. Warm metal. The quiet confidence of a watch that belongs wherever the next horizon leads.</p><a href="#top" class="text-link">Return to the beginning <span class="arrow">↑</span></a></div></section>
+  </main>
+  <footer><span>OMEGA Seamaster</span><span>Character in every detail</span><span>Scroll sequence · 24 fps</span><span>Website created by Gaurav Jee (Owner). All rights reserved.</span></footer>
+  <script>
+    (()=>{
+      const total=242, section=document.querySelector('.scroll-story'), frame=document.getElementById('watchFrame'), label=document.getElementById('frameLabel'), fill=document.getElementById('scrubFill'), bar=document.querySelector('.scrub'), windowEl=document.getElementById('watchWindow');
+      let wanted=1, raf=0, lastSrc='assets/frames/frame_000001.webp';
+      const path=n=>`assets/frames/frame_${String(n).padStart(6,'0')}.webp`;
+      function setFrame(n){
+        n=Math.max(1,Math.min(total,n)); wanted=n;
+        label.innerHTML=`${String(n).padStart(2,'0')}&nbsp; / &nbsp;${total}`;
+        const progress=((n-1)/(total-1))*100; fill.style.width=`${progress}%`; bar.setAttribute('aria-valuenow',String(Math.round(progress)));
+        const src=path(n); if(src===lastSrc)return; lastSrc=src; windowEl.classList.add('is-loading');
+        const next=new Image(); next.decoding='async';
+        next.onload=()=>{if(n===wanted){frame.src=src;windowEl.classList.remove('is-loading')}};
+        next.onerror=()=>{if(n===wanted)windowEl.classList.remove('is-loading')}; next.src=src;
+      }
+      function measure(){
+        const rect=section.getBoundingClientRect();
+        const travel=Math.max(1,section.offsetHeight-window.innerHeight);
+        const passed=Math.max(0,Math.min(travel,-rect.top));
+        setFrame(1+Math.round((passed/travel)*(total-1)));
+      }
+      function onScroll(){if(!raf)raf=requestAnimationFrame(()=>{measure();raf=0})}
+      window.addEventListener('scroll',onScroll,{passive:true}); window.addEventListener('resize',onScroll); measure();
+      // Warm the first few moments so the opening scrub responds immediately.
+      for(let i=2;i<=8;i++){const image=new Image();image.decoding='async';image.src=path(i)}
+    })();
+  </script>
+</body>
+</html>
+
